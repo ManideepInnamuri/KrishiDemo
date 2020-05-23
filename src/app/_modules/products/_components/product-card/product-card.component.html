@@ -1,0 +1,20 @@
+<div class="card mb-4">
+    <div class="card-img-wrapper">
+      <img *ngIf="product.photoUrl!==null"
+        class="card-img-top"
+        src="{{ product.photoUrl }}"
+        alt="{{ product.productName }}"
+      />
+      <img *ngIf="product.photoUrl===null"
+      class="card-img-top"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/User_font_awesome.svg/512px-User_font_awesome.svg.png"
+      alt="{{ product.productName }}"
+    />
+    </div>
+    <div class="card-body p1">
+      <h6 class="card-title text-center mb-1">
+        <i class="fa fa-product"></i>{{ product.productName }},{{ product.productType }}
+      </h6>      
+    </div>
+  </div>
+  
